@@ -1,7 +1,7 @@
+
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import { marked } from "marked";
 import sanitizeHtml from "sanitize-html";
 
 const POSTS_DIR = path.resolve(__dirname, "content/posts");
@@ -24,7 +24,8 @@ function estimateReadTime(text: string): number {
   return Math.max(1, Math.ceil(words / 200));
 }
 
-function parsePost(filename: string): Post | null {
+async function parsePost(filename: string): Promise<Post | null> {
+  const { marked } = await import("marked");
   const slug = filename.replace(/\.md$/, "");
   const filePath = path.join(POSTS_DIR, filename);
   const raw = fs.readFileSync(filePath, "utf-8");
@@ -56,19 +57,19 @@ function parsePost(filename: string): Post | null {
   };
 }
 
-export function getAllPosts(): PostMeta[] {
+export async function getAllPosts(): Promise<PostMeta[]> {
   if (!fs.existsSync(POSTS_DIR)) return [];
 
-  return fs
-    .readdirSync(POSTS_DIR)
-    .filter((f) => f.endsWith(".md"))
-    .map((f) => parsePost(f))
+  const files = fs.readdirSync(POSTS_DIR).filter((f) => f.endsWith(".md"));
+  const posts = await Promise.all(files.map((f) => parsePost(f)));
+
+  return posts
     .filter((p): p is Post => p !== null)
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
     .map(({ content: _content, ...meta }) => meta);
 }
 
-export function getPost(slug: string): Post | null {
+export async function getPost(slug: string): Promise<Post | null> {
   const filename = `${slug}.md`;
   const filePath = path.join(POSTS_DIR, filename);
   if (!fs.existsSync(filePath)) return null;
