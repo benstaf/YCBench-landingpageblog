@@ -4,7 +4,7 @@ import matter from "gray-matter";
 import { marked } from "marked";
 import sanitizeHtml from "sanitize-html";
 
-const POSTS_DIR = path.resolve(__dirname, "../content/posts");
+const POSTS_DIR = path.resolve(__dirname, "content/posts");
 
 export interface PostMeta {
   slug: string;
