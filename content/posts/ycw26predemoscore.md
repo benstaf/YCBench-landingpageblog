@@ -55,7 +55,7 @@ The key insight:
 
 > **Attention is not noise—it’s an early signal of market pull.**
 
-This is supported by academic research showing that [web mentions correlate with startup success outcomes](https://doi.org/10.1145/3269206.3272011).
+This is supported by academic research showing that [web mentions correlate with startup success](https://doi.org/10.1145/3269206.3272011).
 
 So we compute:
 
