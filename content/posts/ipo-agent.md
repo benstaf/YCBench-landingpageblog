@@ -1,6 +1,6 @@
 ---
 
-title: "IPO Finance Agent: Building AI Venture Analysts from the Last Public Data Room"
+title: "IPO Finance Agent - Building AI Venture Analysts from the Last Public Data Room"
 description: "IPO filings are the closest public equivalent of startup data rooms. By benchmarking AI on S-1 due diligence, IPO Finance Agent lays the groundwork for future agentic venture capital systems."
 date: "2026-06-27"
 author: "YC Bench Team"
@@ -173,3 +173,15 @@ If IPO filings truly are the last public data room of a startup, they provide an
 The future of AI investing won't be built around a single benchmark.
 
 It will be built from a series of benchmarks that collectively automate the entire investment journey—from startup application to IPO.
+
+---
+
+## Learn More
+
+This work is described in detail in the paper:
+
+**IPO Finance Agent: Evaluation of LLM Financial Analysts beyond Finance Agent v2, with Automated Rubric Generation — the Case of the SpaceX (SPCX) IPO**
+
+**arXiv:** https://arxiv.org/abs/2606.23032 :contentReference[oaicite:0]{index=0}
+
+**Code & Data:** https://github.com/benstaf/ipoagent
