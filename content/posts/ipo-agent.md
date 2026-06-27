@@ -4,7 +4,7 @@ title: "IPO Finance Agent - Building AI Venture Analysts from the Last Public Da
 description: "IPO filings are the closest public equivalent of startup data rooms. By benchmarking AI on S-1 due diligence, IPO Finance Agent lays the groundwork for future agentic venture capital systems."
 date: "2026-06-27"
 author: "YC Bench Team"
------------------------
+---
 
 One of the biggest challenges in building **AI for venture capital** is surprisingly simple:
 
@@ -182,6 +182,6 @@ This work is described in detail in the paper:
 
 **IPO Finance Agent: Evaluation of LLM Financial Analysts beyond Finance Agent v2, with Automated Rubric Generation — the Case of the SpaceX (SPCX) IPO**
 
-**arXiv:** https://arxiv.org/abs/2606.23032 :contentReference[oaicite:0]{index=0}
+**arXiv:** [https://arxiv.org/abs/2606.23032](https://arxiv.org/abs/2606.23032)
 
-**Code & Data:** https://github.com/benstaf/ipoagent
+**Code & Data:** [https://github.com/benstaf/ipoagent](https://github.com/benstaf/ipoagent)
